@@ -165,12 +165,12 @@ class MenuItemsTableSeederCustom extends Seeder
             ])->save();
         }
 
-        $menuItem = MenuItem::firstOrNew([
-            'menu_id' => $menu->id,
-            'title'   => 'Country Visits',
-            'url'     => '',
-            'route'   => 'voyager.visits',
-        ]);
+        // $menuItem = MenuItem::firstOrNew([
+        //     'menu_id' => $menu->id,
+        //     'title'   => 'Country Visits',
+        //     'url'     => '',
+        //     'route'   => 'voyager.visits',
+        // ]);
         if (!$menuItem->exists) {
             $menuItem->fill([
                 'target'     => '_self',

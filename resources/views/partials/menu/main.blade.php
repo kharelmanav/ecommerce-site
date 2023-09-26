@@ -3,14 +3,8 @@
         <a class="nav-link" href="{{ route('shop.index') }}">Shop</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
-    </li>
-    <li class="nav-item">
         <a class="nav-link {{ request()->route()->getName() == 'cart.index' ? 'active': '' }}" href="{{ route('cart.index') }}">
-            Cart 
+            Cart
             @if (Cart::instance('default')->count() > 0)
                 <span class="badge badge-primary">
                     {{ Cart::instance('default')->count() }}

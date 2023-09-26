@@ -98,19 +98,19 @@ class DataTypesTableSeederCustom extends Seeder
             ])->save();
         }
 
-        $dataType = $this->dataType('slug', 'country_visits');
-        if (!$dataType->exists) {
-            $dataType->fill([
-                'name'                  => 'visits',
-                'display_name_singular' => 'Country Visit',
-                'display_name_plural'   => 'Country Visits',
-                'icon'                  => 'voyager-documentation',
-                'model_name'            => 'App\\CountryVisit',
-                'policy_name'           => '',
-                'generate_permissions'  => 1,
-                'description'           => '',
-            ])->save();
-        }
+        // $dataType = $this->dataType('slug', 'country_visits');
+        // if (!$dataType->exists) {
+        //     $dataType->fill([
+        //         'name'                  => 'visits',
+        //         'display_name_singular' => 'Country Visit',
+        //         'display_name_plural'   => 'Country Visits',
+        //         'icon'                  => 'voyager-documentation',
+        //         'model_name'            => 'App\\CountryVisit',
+        //         'policy_name'           => '',
+        //         'generate_permissions'  => 1,
+        //         'description'           => '',
+        //     ])->save();
+        // }
 
     }
 

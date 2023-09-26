@@ -97,7 +97,7 @@
                     <span class="light-text">Subtotal</span>
                 </div>
                 <div class="col-md-4 offset-md-4">
-                    <span class="light-text" style="display: inline-block">${{ format($subtotal) }}</span>
+                    <span class="light-text" style="display: inline-block">Rs{{ format($subtotal) }}</span>
                 </div>
             </div>
             @if (session()->has('coupon'))
@@ -141,15 +141,6 @@
                     <span class="text-right" style="display: inline-block">${{ format($total) }}</span>
                 </div>
             </div>
-            <hr>
-            @if (!session()->has('coupon'))
-                <form action="{{ route('coupon.store') }}" method="POST">
-                    @csrf()
-                    <label for="coupon_code">Have a coupon ?</label>
-                    <input type="text" name="coupon_code" id="coupon" class="form-control my-input" placeholder="123456" required>
-                    <button type="submit" class="btn btn-success custom-border-success btn-block">Apply Coupon</button>
-                </form>
-            @endif
         </div>
     </div>
 </div>

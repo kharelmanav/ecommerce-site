@@ -28,8 +28,8 @@ Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');
 Route::get('/guest-checkout', 'CheckoutController@index')->name('checkout.guest');
 
 // coupon
-Route::post('/coupon', 'CouponsController@store')->name('coupon.store');
-Route::delete('/coupon/', 'CouponsController@destroy')->name('coupon.destroy');
+// Route::post('/coupon', 'CouponsController@store')->name('coupon.store');
+// Route::delete('/coupon/', 'CouponsController@destroy')->name('coupon.destroy');
 
 // auth routes
 Auth::routes();
@@ -40,5 +40,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
-    Route::get('/country_visits', 'VisitsController@index')->name('voyager.visits');
+    // Route::get('/country_visits', 'VisitsController@index')->name('voyager.visits');
 });
+
+
